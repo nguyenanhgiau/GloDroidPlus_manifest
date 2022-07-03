@@ -43,7 +43,7 @@
   <project path="external/u-boot"          remote="glodroid" name="glodroid_forks.git" revision="refs/tags/uboot-v0.7.1" />
   <project path="kernel/glodroid-megous"   remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-megous-v0.7.2" />
   <project path="kernel/glodroid-megous-edge"   remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-megous-edge-v0.7.4" />
-  <project path="kernel/glodroid-broadcom" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-broadcom-v0.7.3" />
+  <project path="kernel/glodroid-broadcom" remote="mgitlab" name="glodroid_platform/kernel/glodroid-broadcom" revision="main" />
   <project path="kernel/glodroid-stable"   remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-stable-v0.7.1" />
   <project path="kernel/glodroid-modules/rtl8189es" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/rtl8189es-v0.7.1" />
   <project path="kernel/glodroid-modules/rtl8189fs" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/rtl8189fs-v0.7.1" />
