@@ -2315,4 +2315,5 @@
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
   <include name="glodroid.xml" />
+  <include name="lightweight.xml" />
 </manifest>
