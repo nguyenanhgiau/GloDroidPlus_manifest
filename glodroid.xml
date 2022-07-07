@@ -8,7 +8,7 @@
   <remote  name="mgitlab"  fetch="https://gitlab.com/glodroid_platform/" />
 
   <remove-project name="platform/build" />
-  <project path="build/make" name="build" groups="pdk" remote="mgitlab" revision="main">
+  <project path="build/make" name="build" groups="mglodroid" remote="mgitlab" revision="main">
       <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
 
       <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
@@ -29,7 +29,7 @@
   <remove-project name="platform/external/mesa3d" />
   <remove-project name="platform/external/drm_hwcomposer" />
 
-  <project path="device/glodroid"        remote="mgitlab" name="device/glodroid"        revision="main" />
+  <project path="device/glodroid" remote="mgitlab" name="device/glodroid" groups="mglodroid" revision="main" />
   <project path="prebuilts/applications" remote="glodroid" name="glodroid_external_apks.git" revision="refs/tags/apps-v0.7.1" />
 
   <project path="external/libcamera"       remote="glodroid" name="glodroid_forks.git" revision="refs/tags/libcamera-v0.7.4" />
@@ -43,7 +43,7 @@
   <project path="external/u-boot"          remote="glodroid" name="glodroid_forks.git" revision="refs/tags/uboot-v0.7.1" />
   <project path="kernel/glodroid-megous"   remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-megous-v0.7.2" />
   <project path="kernel/glodroid-megous-edge"   remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-megous-edge-v0.7.4" />
-  <project path="kernel/glodroid-broadcom" remote="mgitlab" name="kernel/glodroid-broadcom" revision="main" />
+  <project path="kernel/glodroid-broadcom" remote="mgitlab" name="kernel/glodroid-broadcom" groups="mglodroid" revision="main" />
   <project path="kernel/glodroid-stable"   remote="glodroid" name="glodroid_forks.git" revision="refs/tags/kernel-stable-v0.7.1" />
   <project path="kernel/glodroid-modules/rtl8189es" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/rtl8189es-v0.7.1" />
   <project path="kernel/glodroid-modules/rtl8189fs" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/rtl8189fs-v0.7.1" />
@@ -69,8 +69,8 @@
   <project path="vendor/rockchip/rkbin" remote="github" name="rockchip-linux/rkbin.git" revision="7d631e0d5b2d373b54d4533580d08fb9bd2eaad4" clone-depth="1" />
 
   <!--hardware-->
-  <project path="hardware/broadcom/lights-hal"    remote="mgitlab" name="hardware/broadcom/android-lights-hal"  revision="main" />
-  <project path="hardware/broadcom/vibrator-hal"  remote="mgitlab" name="hardware/broadcom/android-vibrator-hal"  revision="main" />
-  <project path="hardware/st/sensors-hal"         remote="mgitlab" name="hardware/st/st-mems-android-linux-sensors-hal" revision="main" />
+  <project path="hardware/broadcom/lights-hal" remote="mgitlab" name="hardware/broadcom/android-lights-hal" groups="mglodroid" revision="main" />
+  <project path="hardware/broadcom/vibrator-hal" remote="mgitlab" name="hardware/broadcom/android-vibrator-hal" groups="mglodroid" revision="main" />
+  <project path="hardware/st/sensors-hal" remote="mgitlab" name="hardware/st/st-mems-android-linux-sensors-hal" groups="mglodroid" revision="main" />
 
 </manifest>
