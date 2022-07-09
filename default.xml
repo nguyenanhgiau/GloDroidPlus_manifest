@@ -5,13 +5,17 @@
 
   <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android.googlesource.com/" />
   <remote name="mgitlab" fetch="https://gitlab.com/glodroid_platform/" />
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="gitlab" fetch="https://gitlab.freedesktop.org/" />
+  <remote name="glodroid" fetch="https://github.com/glodroid/" />
+  <remote name="megous" fetch="https://megous.com/git/" />
 
   <default revision="master" remote="aosp" sync-j="4" />
 
   <superproject name="platform/superproject" remote="aosp" />
 
   <!--Glodroid for rpi4-->
-  <project path="build/make" name="build" groups="mglodroid" remote="mgitlab" revision="main">
+  <project path="build/make" name="build" groups="mglodroid,pdk" remote="mgitlab" revision="main">
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
 
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
@@ -2312,11 +2316,6 @@
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
   <!--glodroid common-->
-  <remote  name="github"   fetch="https://github.com/" />
-  <remote  name="gitlab"   fetch="https://gitlab.freedesktop.org/" />
-  <remote  name="glodroid" fetch="https://github.com/glodroid/" />
-  <remote  name="megous"   fetch="https://megous.com/git/" />
-
   <remove-project                               name="platform/external/arm-trusted-firmware" />
   <project path="external/arm-trusted-firmware" name="platform/external/arm-trusted-firmware" revision="a127b99d5a063c798d1c6d2e1d4791a630f78355" />
 
