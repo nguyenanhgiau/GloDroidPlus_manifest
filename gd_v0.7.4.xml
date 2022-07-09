@@ -15,7 +15,7 @@
   <superproject name="platform/superproject" remote="aosp" />
 
   <!--Glodroid for rpi4-->
-  <project path="build/make" name="platform/build" groups="pdk" revision="9ec1a7aa72453a5792bafe699dc704ab4b3fc413">
+  <project path="build/make" name="build" groups="mglodroid,pdk" remote="mgitlab" revision="9ec1a7aa72453a5792bafe699dc704ab4b3fc413">
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
 
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
@@ -28,8 +28,8 @@
 
     <linkfile dest="build/tools" src="tools" />
   </project>
-  <project path="device/glodroid" remote="glodroid" name="glodroid_device.git" groups="mglodroid" revision="refs/tags/v0.7.4" />
-  <project path="kernel/glodroid-broadcom" remote="glodroid" name="glodroid_forks.git" groups="mglodroid" revision="refs/tags/kernel-broadcom-v0.7.3" />
+  <project path="device/glodroid" remote="mgitlab" name="device/glodroid" groups="mglodroid" revision="refs/tags/v0.7.4" />
+  <project path="kernel/glodroid-broadcom" remote="mgitlab" name="kernel/glodroid-broadcom" groups="mglodroid" revision="refs/tags/kernel-broadcom-v0.7.3" />
   <!--end Glodroid for rpi4-->
 
   <project path="build/bazel" name="platform/build/bazel" groups="pdk" revision="bc077c22caddcd2d25e49b6a131b113a4cc443c6">
