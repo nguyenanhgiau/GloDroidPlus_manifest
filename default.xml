@@ -10,6 +10,7 @@
 
   <superproject name="platform/superproject" remote="aosp" />
 
+  <!--Glodroid for rpi4-->
   <project path="build/make" name="build" groups="mglodroid" remote="mgitlab" revision="main">
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
 
@@ -23,6 +24,12 @@
 
     <linkfile dest="build/tools" src="tools" />
   </project>
+  <project path="device/glodroid" remote="mgitlab" name="device/glodroid" groups="mglodroid" revision="main" />
+  <project path="hardware/broadcom/lights-hal" remote="mgitlab" name="hardware/broadcom/android-lights-hal" groups="mglodroid" revision="main" />
+  <project path="hardware/broadcom/vibrator-hal" remote="mgitlab" name="hardware/broadcom/android-vibrator-hal" groups="mglodroid" revision="main" />
+  <project path="hardware/st/sensors-hal" remote="mgitlab" name="hardware/st/st-mems-android-linux-sensors-hal" groups="mglodroid" revision="main" />
+  <project path="kernel/glodroid-broadcom" remote="mgitlab" name="kernel/glodroid-broadcom" groups="mglodroid" revision="main" />
+  <!--end Glodroid for rpi4-->
 
   <project path="build/bazel" name="platform/build/bazel" groups="pdk" revision="bc077c22caddcd2d25e49b6a131b113a4cc443c6">
     <linkfile dest="WORKSPACE" src="bazel.WORKSPACE" />
@@ -187,8 +194,6 @@
   <project path="device/ti/beagle_x15" name="device/ti/beagle-x15" groups="device,beagle_x15,pdk" revision="150159625d70d21739954fc6a6f3d25ca8dabd08" />
 
   <project path="device/ti/beagle_x15-kernel" name="device/ti/beagle-x15-kernel" groups="device,beagle_x15,pdk" clone-depth="1" revision="e74de7750190cd051965359ff5158e5ffdf229f8" />
-
-  <project path="device/glodroid" remote="mgitlab" name="device/glodroid" groups="mglodroid" revision="main" />
 
   <project path="external/aac" name="platform/external/aac" groups="pdk" revision="3070cab376bd2a4b86df798d1f11dff0aef48b61" />
 
@@ -1532,10 +1537,6 @@
 
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" revision="ceafbfa03364da83ed8943cf2142f9e5ac27831b" />
 
-  <project path="hardware/broadcom/lights-hal" remote="mgitlab" name="hardware/broadcom/android-lights-hal" groups="mglodroid" revision="main" />
-
-  <project path="hardware/broadcom/vibrator-hal" remote="mgitlab" name="hardware/broadcom/android-vibrator-hal" groups="mglodroid" revision="main" />
-
   <project path="hardware/google/apf" name="platform/hardware/google/apf" groups="pdk" revision="036937ad847328f9e841c3fb21e6fcfded1eca00" />
 
   <project path="hardware/google/av" name="platform/hardware/google/av" groups="pdk" revision="7519ebe3b080904841b2c570a775d47a598dbfe0" />
@@ -1670,8 +1671,6 @@
 
   <project path="hardware/st/secure_element2" name="platform/hardware/st/secure_element2" groups="pdk" revision="ab466ddea20eeb6b944f32b8388907ce1e7bb467" />
 
-  <project path="hardware/st/sensors-hal" remote="mgitlab" name="hardware/st/st-mems-android-linux-sensors-hal" groups="mglodroid" revision="main" />
-
   <project path="hardware/samsung/nfc" name="platform/hardware/samsung/nfc" groups="pdk" revision="d82d36a4d577305dc785a89da771f13409bae3ee" />
 
   <project path="hardware/ti/am57x" name="platform/hardware/ti/am57x" groups="pdk" revision="fb9ea7f0fafa9aa7f882f927faa0d12b117b83da" />
@@ -1717,8 +1716,6 @@
   <project path="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" name="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" groups="pdk" clone-depth="1" revision="292caf1fb9dcc7a51edc0117d0486ecaba8443a7" />
 
   <project path="kernel/tests" name="kernel/tests" groups="vts,pdk" revision="e480939856f384db787a6adcdec1d2a07c2fd02a" />
-
-  <project path="kernel/glodroid-broadcom" remote="mgitlab" name="kernel/glodroid-broadcom" groups="mglodroid" revision="main" />
 
   <project path="libcore" name="platform/libcore" groups="pdk" revision="439de6824b6938e4d7d581b7747098b4ee00249a" />
 
