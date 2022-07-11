@@ -28,8 +28,8 @@ chmod a+x ~/bin/repo
 ```bash
 mkdir -p GloDroid
 cd GloDroid
-repo init -u https://github.com/glodroid/glodroid_manifest
-repo sync -cq
+repo init -u https://gitlab.com/glodroid_platform/glodroid_manifest.git
+repo sync -df -j8 --force-sync
 ```
 
 ## You should install additional packages in order to build GloDroid
