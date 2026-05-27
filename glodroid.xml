@@ -8,24 +8,27 @@
 
   <remove-project name="platform/external/mesa3d" />
   <remove-project name="platform/external/v4l2_codec2" />
-  <remove-project name="platform/external/wpa_supplicant_8" />
 
   <!-- glodroid patches-aosp -->
   <remove-project name="platform/external/libcxx" />
   <remove-project name="platform/external/lzma" />
   <remove-project name="platform/external/tinycompress" />
   <remove-project name="platform/hardware/interfaces" />
-  <remove-project name="platform/system/core" />
+  <remove-project name="platform/external/drm_hwcomposer" />
+  <remove-project name="device/amlogic/yukawa" />
+  <remove-project name="device/linaro/hikey" />
+  <remove-project name="platform/external/zstd" />
+  <remove-project name="platform/external/swiftshader" />
 
   <!-- glodroid configuration -->
-  <project path="device/brcm" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-2.1" />
+  <project path="device/brcm" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-2.2" />
 
   <project path="glodroid/apks"                   remote="glodroid" name="glodroid_external_apks.git" groups="glodroid" revision="refs/tags/apps-v0.8.2" />
 
   <!-- gpu+display components (vendor) -->
   <project path="glodroid/vendor/minigbm"         remote="mygitlab" name="glodroid/vendor/minigbm"        groups="glodroid" revision="glodroid-2.1" />
   <project path="glodroid/vendor/drm_hwcomposer"  remote="mygitlab" name="glodroid/vendor/drm_hwcomposer" groups="glodroid" revision="glodroid-2.1" />
-  <project path="glodroid/vendor/mesa3d"          remote="mygitlab" name="external/mesa3d"         groups="glodroid" revision="glodroid-2.1" />
+  <project path="glodroid/vendor/mesa3d"          remote="mygitlab" name="external/mesa3d"         groups="glodroid" revision="glodroid-2.2" />
 
   <!-- camera components (vendor) -->
   <project path="glodroid/vendor/libcamera"                     remote="mygitlab" name="glodroid/vendor/libcamera"      groups="glodroid" revision="glodroid-2.1" />
@@ -35,16 +38,15 @@
   <!-- video codecs components (vendor) -->
   <project path="glodroid/vendor/ffmpeg"          remote="mygitlab"      name="glodroid/vendor/ffmpeg"  groups="glodroid" revision="glodroid-2.1" clone-depth="1"/>
   <project path="glodroid/vendor/ffmpeg_codec2"   remote="mygitlab"    name="glodroid/vendor/ffmpeg_codec2" groups="glodroid" revision="glodroid-2.1" clone-depth="1"/>
-  <project path="external/v4l2_codec2" name="external/v4l2_codec2" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.1"/>
+  <project path="external/v4l2_codec2" name="external/v4l2_codec2" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
+  <project path="external/zstd" name="external/zstd" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
+  <project path="external/swiftshader" name="external/swiftshader" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
 
   <!-- other components (vendor) -->
-  <project path="glodroid/vendor/aospext"         remote="mygitlab" name="glodroid/vendor/aospext"        groups="glodroid" revision="glodroid-2.1" />
+  <project path="glodroid/vendor/aospext"         remote="mygitlab" name="glodroid/vendor/aospext"        groups="glodroid" revision="glodroid-2.2" />
   <project path="glodroid/vendor/iio-sensors-hal" remote="glodroid" name="glodroid_forks.git" groups="glodroid" revision="refs/tags/iio-sensors-hal-v0.9.0" />
   <project path="glodroid/vendor/tinyhal"         remote="mygitlab"   name="glodroid/vendor/tinyhal" groups="glodroid" revision="glodroid-2.1" />
   <project path="glodroid/vendor/libudev-zero"    remote="glodroid" name="glodroid_forks.git" groups="glodroid" revision="refs/tags/libudev_zero-v0.8.2" />
-
-  <!-- Downgrade wpa_supplicant to Android-13 commit point. TODO: Remove this when the RPI4 WIFI issue is found/fixed -->
-  <project path="external/wpa_supplicant_8" name="external/wpa_supplicant_8" remote="mygitlab" groups="pdk" revision="glodroid-2.1"/>
 
   <!-- bootloader components (platform) -->
   <project path="glodroid/bootloader/u-boot"      remote="mygitlab" name="glodroid/bootloader/u-boot"    groups="glodroid" revision="glodroid-2.1"/>
@@ -62,11 +64,9 @@
                                            remote="glodroid" name="linaro_gcc_prebuilts.git" groups="glodroid" revision="refs/tags/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi" />
 
   <!-- glodroid modifications -->
-  <project path="external/libcxx" name="external/libcxx" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.1"/>
+  <project path="external/libcxx" name="external/libcxx" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
   <project path="external/lzma" name="external/lzma" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.1"/>
   <project path="external/tinycompress" name="external/tinycompress" remote="mygitlab" groups="pdk" revision="glodroid-2.1"/>
 
-  <project path="hardware/interfaces" name="hardware/interfaces" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.1"/>
-
-  <project path="system/core" name="system/core" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.1"/>
+  <project path="hardware/interfaces" name="hardware/interfaces" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
 </manifest>
