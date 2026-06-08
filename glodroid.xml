@@ -10,10 +10,6 @@
   <remove-project name="platform/external/v4l2_codec2" />
 
   <!-- glodroid patches-aosp -->
-  <remove-project name="platform/external/libcxx" />
-  <remove-project name="platform/external/lzma" />
-  <remove-project name="platform/external/tinycompress" />
-  <remove-project name="platform/hardware/interfaces" />
   <remove-project name="platform/external/drm_hwcomposer" />
   <remove-project name="device/amlogic/yukawa" />
   <remove-project name="device/linaro/hikey" />
@@ -22,8 +18,6 @@
 
   <!-- glodroid configuration -->
   <project path="device/brcm" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-2.2" />
-
-  <!-- <project path="glodroid/apks"                   remote="glodroid" name="glodroid_external_apks.git" groups="glodroid" revision="refs/tags/apps-v0.8.2" /> -->
 
   <!-- gpu+display components (vendor) -->
   <project path="glodroid/vendor/minigbm"         remote="mygitlab" name="glodroid/vendor/minigbm"        groups="glodroid" revision="glodroid-2.1" />
@@ -63,10 +57,4 @@
   <project path="prebuilts/gcc/linux-x86/arm/gcc-linaro-arm-eabi"
                                            remote="glodroid" name="linaro_gcc_prebuilts.git" groups="glodroid" revision="refs/tags/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi" />
 
-  <!-- glodroid modifications -->
-  <project path="external/libcxx" name="external/libcxx" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
-  <project path="external/lzma" name="external/lzma" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.1"/>
-  <project path="external/tinycompress" name="external/tinycompress" remote="mygitlab" groups="pdk" revision="glodroid-2.1"/>
-
-  <project path="hardware/interfaces" name="hardware/interfaces" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-2.2"/>
 </manifest>
