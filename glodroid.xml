@@ -36,12 +36,12 @@
   <project path="glodroid/vendor/libudev-zero"    remote="glodroid" name="glodroid_forks.git" groups="glodroid" revision="refs/tags/libudev_zero-v0.8.2" />
 
   <!-- bootloader components (platform) -->
-  <project path="glodroid/bootloader/u-boot"      remote="mygitlab" name="glodroid/bootloader/u-boot"    groups="glodroid" revision="glodroid-2.1"/>
+  <project path="glodroid/bootloader/u-boot"      remote="mygitlab" name="glodroid/bootloader/u-boot"    groups="glodroid" revision="glodroid-a16"/>
   <project path="glodroid/bootloader/atf"         name="platform/external/arm-trusted-firmware" groups="glodroid" revision="a127b99d5a063c798d1c6d2e1d4791a630f78355" />
   <project path="glodroid/bootloader/raspberry-fw"  remote="github"  name="raspberrypi/firmware.git" groups="glodroid" revision="57b8dbdce68c8f5e2a425d86e4e7e149e911b9d3" clone-depth="1" />
 
   <!-- kernel/firmware components (platform) -->
-  <project path="glodroid/kernel/broadcom"        remote="glodroid" name="glodroid_forks.git" groups="glodroid" revision="refs/tags/kernel-broadcom-2026w17" />
+  <project path="glodroid/kernel/broadcom"        remote="mygitlab" name="kernel/glodroid-broadcom" groups="glodroid" revision="glodroid-a16" />
 
   <!-- compilers for platform components -->
   <project path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-aarch64-linux-gnu"
