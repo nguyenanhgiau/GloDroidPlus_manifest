@@ -11,7 +11,7 @@
 
   <!-- glodroid configuration -->
   <project path="glodroid"                        remote="glodroid" name="glodroid_configuration.git" groups="glodroid" revision="refs/tags/basedir-v0.9.0" />
-  <project path="glodroid/configuration" remote="mygitlab" name="glodroid/glodroid-configuration" groups="glodroid" revision="glodroid-2.2" />
+  <project path="glodroid/configuration" remote="mygitlab" name="glodroid/glodroid-configuration" groups="glodroid" revision="glodroid-a16" />
 
   <project path="glodroid/apks"                   remote="glodroid" name="glodroid_external_apks.git" groups="glodroid" revision="refs/tags/apps-v0.8.2" />
 
@@ -20,10 +20,10 @@
   <project path="glodroid/vendor/mesa3d"          remote="mygitlab" name="external/mesa3d"         groups="glodroid" revision="glodroid-a16" />
 
   <!-- camera components (vendor) -->
-  <project path="glodroid/vendor/libcamera"       remote="mygitlab" name="glodroid/vendor/libcamera" groups="glodroid" revision="glodroid-a16" />
-  <remove-project name="platform/external/libyaml" />
-  <project path="external/libyaml"  remote="mygitlab"  name="external/libyaml" groups="glodroid" revision="glodroid-a16" />
-  <project path="external/libyuv_chromium"        remote="ti"   name="android/external-libyuv_chromium.git" groups="glodroid" revision="0bb9615271551c974f95397d8250a1edffa4433e" />
+  <remove-project name="platform/external/libcamera" />
+  <project path="external/libcamera" name="external/libcamera" remote="mygitlab" revision="glodroid-a16" />
+  <project path="external/libpisp" name="raspberry-vanilla/android_external_libpisp" remote="github" revision="android-16.0" />
+  <project path="external/libyuv_chromium" name="raspberry-vanilla/android_external_libyuv_chromium" remote="github" revision="android-16.0" />
 
   <!-- video codecs components (vendor) -->
   <project path="glodroid/vendor/ffmpeg"          remote="mygitlab"      name="glodroid/vendor/ffmpeg"  groups="glodroid" revision="glodroid-a16" clone-depth="1"/>
