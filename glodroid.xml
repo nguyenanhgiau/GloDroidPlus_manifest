@@ -33,7 +33,7 @@
   <!-- other components (vendor) -->
   <project path="glodroid/vendor/aospext"         remote="mygitlab" name="glodroid/vendor/aospext"        groups="glodroid" revision="glodroid-a17" />
   <project path="glodroid/vendor/iio-sensors-hal" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/iio-sensors-hal-v0.9.0" />
-  <!-- <project path="glodroid/vendor/audio"           remote="mygitlab"   name="glodroid/vendor/audio" groups="glodroid" revision="glodroid-a17" /> -->
+  <project path="glodroid/vendor/audio"           remote="mygitlab"   name="glodroid/vendor/audio" groups="glodroid" revision="glodroid-a17" />
   <project path="glodroid/vendor/libudev-zero"    remote="glodroid" name="glodroid_forks.git" revision="refs/tags/libudev_zero-v0.8.2" />
 
   <!-- bootloader components (platform) -->
