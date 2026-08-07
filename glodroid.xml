@@ -51,10 +51,10 @@
                                            remote="glodroid" name="linaro_gcc_prebuilts.git" revision="refs/tags/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi" />
 
   <!-- glodroid patches-aosp modification -->
-  <remove-project name="platform/external/libcxx" />
-  <project path="external/libcxx"          remote="mygitlab" name="external/libcxx"         groups="pdk,glodroid" revision="glodroid-a17" />
-  <remove-project name="platform/external/tinycompress" />
-  <project path="external/tinycompress" name="external/tinycompress" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-a17"/>
+  <!-- <remove-project name="platform/external/libcxx" />
+  <project path="external/libcxx"          remote="mygitlab" name="external/libcxx"         groups="pdk,glodroid" revision="glodroid-a17" /> -->
+  <!-- <remove-project name="platform/external/tinycompress" />
+  <project path="external/tinycompress" name="external/tinycompress" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-a17"/> -->
   <!-- <remove-project name="platform/external/v4l2_codec2" />
   <project path="external/v4l2_codec2" name="external/v4l2_codec2" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-a17"/> -->
   <!-- <remove-project name="platform/hardware/interfaces" />
