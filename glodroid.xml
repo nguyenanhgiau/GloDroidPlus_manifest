@@ -11,7 +11,6 @@
 
   <!-- glodroid configuration -->
   <project path="glodroid"                        remote="glodroid" name="glodroid_configuration.git" revision="refs/tags/basedir-v0.9.0" />
-  <project path="glodroid/configuration" remote="mygitlab" name="glodroid/glodroid-configuration" groups="glodroid" revision="glodroid-a17" />
 
   <!-- <project path="glodroid/apks"                   name="glodroid_external_apks.git" revision="refs/tags/apps-v0.8.2" /> -->
 
@@ -50,13 +49,4 @@
   <project path="prebuilts/gcc/linux-x86/arm/gcc-linaro-arm-eabi"
                                            remote="glodroid" name="linaro_gcc_prebuilts.git" revision="refs/tags/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi" />
 
-  <!-- glodroid patches-aosp modification -->
-  <!-- <remove-project name="platform/external/libcxx" />
-  <project path="external/libcxx"          remote="mygitlab" name="external/libcxx"         groups="pdk,glodroid" revision="glodroid-a17" /> -->
-  <!-- <remove-project name="platform/external/tinycompress" />
-  <project path="external/tinycompress" name="external/tinycompress" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-a17"/> -->
-  <!-- <remove-project name="platform/external/v4l2_codec2" />
-  <project path="external/v4l2_codec2" name="external/v4l2_codec2" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-a17"/> -->
-  <!-- <remove-project name="platform/hardware/interfaces" />
-  <project path="hardware/interfaces" name="hardware/interfaces" remote="mygitlab" groups="pdk,glodroid" revision="glodroid-a17"/> -->
 </manifest>
