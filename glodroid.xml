@@ -9,15 +9,12 @@
 
   <project path="device/brcm/rpi4" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-a17" />
 
-  <!-- glodroid configuration -->
-  <project path="glodroid"                        remote="glodroid" name="glodroid_configuration.git" revision="refs/tags/basedir-v0.9.0" />
-
-  <!-- <project path="glodroid/apks"                   name="glodroid_external_apks.git" revision="refs/tags/apps-v0.8.2" /> -->
-
-  <!-- gpu+display components (vendor) -->
-  <project path="glodroid/vendor/minigbm"         remote="mygitlab" name="glodroid/vendor/minigbm"        groups="glodroid" revision="glodroid-a17" />
-  <project path="glodroid/vendor/mesa3d"          remote="mygitlab" name="external/mesa3d"         groups="glodroid" revision="glodroid-a17" />
-
+  <!-- Graphics -->
+  <remove-project name="platform/external/drm_hwcomposer" />
+  <remove-project name="platform/external/minigbm" />
+  <project path="external/drm_hwcomposer" name="raspberry-vanilla/android_external_drm_hwcomposer" remote="github" groups="glodroid" revision="android-17.0" />
+  <project path="external/mesa3d-rpi" remote="mygitlab" name="external/mesa3d"         groups="glodroid" revision="glodroid-a17" />
+  <project path="external/minigbm" name="raspberry-vanilla/android_external_minigbm" remote="github" groups="glodroid" revision="android-17.0" />
 
   <!-- camera components (vendor) -->
   <remove-project name="platform/external/libcamera" />
