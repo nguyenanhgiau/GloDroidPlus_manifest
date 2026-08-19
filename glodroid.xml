@@ -27,13 +27,17 @@
   <project path="external/libyuv_chromium" name="raspberry-vanilla/android_external_libyuv_chromium" remote="github" revision="android-16.0" />
 
   <!-- video codecs components (vendor) -->
-  <project path="glodroid/vendor/ffmpeg"          remote="mygitlab"      name="glodroid/vendor/ffmpeg"  groups="glodroid" revision="glodroid-a17" clone-depth="1"/>
-  <project path="glodroid/vendor/ffmpeg_codec2"   remote="mygitlab"    name="glodroid/vendor/ffmpeg_codec2" groups="glodroid" revision="glodroid-a17" clone-depth="1"/>
+  <remove-project name="platform/external/libudev-zero" />
+  <project path="external/ffmpeg" name="raspberry-vanilla/android_external_ffmpeg" remote="github" revision="android-17.0" />
+  <project path="external/ffmpeg_codec2" name="raspberry-vanilla/android_external_ffmpeg_codec2" remote="github" revision="android-17.0" />
+  <project path="external/libudev-zero" name="external/libudev-zero" remote="mygitlab" groups="glodroid" revision="glodroid-a17" />
+
+  <!-- v4l2_codec2 -->
+  <remove-project name="platform/external/v4l2_codec2" />
+  <project path="external/v4l2_codec2" name="raspberry-vanilla/android_external_v4l2_codec2" remote="github" revision="android-17.0" />
 
   <!-- other components (vendor) -->
-  <project path="glodroid/vendor/aospext"         remote="mygitlab" name="glodroid/vendor/aospext"        groups="glodroid" revision="glodroid-a17" />
   <project path="glodroid/vendor/iio-sensors-hal" remote="glodroid" name="glodroid_forks.git" revision="refs/tags/iio-sensors-hal-v0.9.0" />
-  <project path="glodroid/vendor/libudev-zero"    remote="glodroid" name="glodroid_forks.git" revision="refs/tags/libudev_zero-v0.8.2" />
 
   <!-- bootloader components (platform) -->
   <project path="glodroid/bootloader/u-boot"      remote="mygitlab" name="glodroid/bootloader/u-boot"    groups="glodroid" revision="glodroid-a17"/>
