@@ -2,10 +2,8 @@
 <manifest>
 
   <remote  name="glodroid" fetch="https://github.com/glodroid/" />
-  <remote  name="libcamera"  fetch="https://git.libcamera.org/libcamera" />
   <remote  name="mygitlab"       fetch="git@gitlab.com:glodroid_platform" />
   <remote  name="github"   fetch="https://github.com/" />
-  <remote  name="ti"         fetch="https://git.ti.com/git" />
 
   <project path="device/brcm/rpi4" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-a17" />
 
@@ -23,8 +21,8 @@
   <!-- camera components (vendor) -->
   <remove-project name="platform/external/libcamera" />
   <project path="external/libcamera" name="external/libcamera" remote="mygitlab" groups="glodroid" revision="glodroid-a17" />
-  <project path="external/libpisp" name="raspberry-vanilla/android_external_libpisp" remote="github" revision="android-16.0" />
-  <project path="external/libyuv_chromium" name="raspberry-vanilla/android_external_libyuv_chromium" remote="github" revision="android-16.0" />
+  <project path="external/libpisp" name="external/libpisp" remote="mygitlab" groups="glodroid" revision="glodroid-a17"/>
+  <project path="external/libyuv_chromium" name="raspberry-vanilla/android_external_libyuv_chromium" remote="github" revision="android-17.0" />
 
   <!-- video codecs components (vendor) -->
   <remove-project name="platform/external/libudev-zero" />
