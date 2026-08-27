@@ -1,8 +1,24 @@
-### Device-specific configuration for building AOSP Android 16 for Raspberry Pi 4
+# GloDroid+
+An AOSP distribution for the Raspberry Pi 4, specifically designed for research, testing, and hardware prototyping for Android Platform Engineers.
+
+The Raspberry Pi 4 is an accessible hardware platform with a vast, dynamic support community, possessing sufficient processing power to seamlessly run the Android operating system.
+
+This project is the combination of two open-source repositories: GloDroid and Raspberry-vanilla. The goal of GloDroid+ is to eliminate existing drawbacks while inheriting the technical excellence of both original projects:
+* Full support for U-Boot as the Bootloader.
+* Integrated Recovery environment and Fastbootd.
+* Support for Super Partitions (Dynamic Partitions) architecture.
+* A clean, modular codebase architecture that is easy to maintain and expand for custom hardware development.
+
+# Acknowledgements & License
+This project is heavily based on the outstanding work of two upstream projects:
+* [GloDroid](https://github.com/GloDroidCommunity/raspberry-pi)
+* [Raspberry-vanilla](https://github.com/raspberry-vanilla/android_local_manifest)
+
+GloDroid+ does not claim ownership of the original codebases. All modifications and integrated source codes strictly inherit the respective open-source licenses of their original upstream projects (primarily the Apache License 2.0 for AOSP components and GNU GPLv2 for Kernel/U-Boot components). Please refer to the specific repositories for detailed licensing information.
 
 ***
 
-### How to build (Ubuntu 22.04 LTS)
+## How to build (Ubuntu 22.04 LTS)
 
 1. Set up the [Android build environment](https://source.android.com/docs/setup/start/requirements).
 
@@ -23,7 +39,7 @@ git clone https://gitlab.com/glodroid_platform/glodroid_manifest.git -b glodroid
 4. Sync the source code:
 
 ```
-repo sync
+repo sync -c -j$(nproc) --no-clone-bundle
 ```
 
 5. Set up the Android build environment:
@@ -32,10 +48,12 @@ repo sync
 . build/envsetup.sh
 ```
 
-6. Select the target device:
+6. Select the build target (tablet UI, `tv` for Android TV, or `car` for Android Automotive):
 
 ```
 lunch rpi4-trunk_staging-userdebug
+lunch rpi4_car-trunk_staging-userdebug
+lunch rpi4_tv-trunk_staging-userdebug
 ```
 
 7. Build the images:
@@ -45,24 +63,28 @@ make images -j$(nproc)
 make sdcard -j$(nproc)
 ```
 
-8. Create a flashable image for the `rpi4` device:
+## How to flash the image to rpi4 device
 
-8.1. Plug SDCard to SDCard Reader and connect it to your Linux PC.
+1. Insert your SD card into a card reader and connect it to your Linux PC.
 
-8.2. Write `out/target/product/rpi4/sdcard.img` to your SD card.
+2. Identify your SD card device node (e.g., /dev/sdc, /dev/mmcblk0) using lsblk.
+
+⚠️ WARNING: Be absolutely certain you have the correct device node before running the dd command. Specifying the wrong drive will permanently erase your system data!
+
+3. Flash the image to your SD card:
 ```bash
-sudo umount /dev/sdc* #Replace sdc with your device node
+# Replace /dev/sdX with your actual device node
+sudo umount /dev/sdX* 
 cd $OUT
-sudo dd if=sdcard.img of=/dev/sdc bs=1M status=progress conv=fsync
+sudo dd if=sdcard.img of=/dev/sdX bs=1M status=progress conv=fsync
 ```
 
-8.3. Insert the SD card into your Raspberry Pi.
+4. Insert the flashed SD card into your Raspberry Pi 4
 
-8.4. Connect the UART cable to capture the serial log.
+5. (Optional but recommended) Connect a UART serial cable to the GPIO pins to capture the low-level boot logs (U-Boot & Kernel dmesg).
 
-8.5. Connect the Raspberry Pi to your PC via a USB cable and power it on.
+6. Connect the Raspberry Pi to your PC via a USB Type-C cable to power it on.
 
-8.6. Wait for a while to see the result.
+7. Monitor the serial output and wait for the Android UI to boot up.
 
-
-Have fun!!!
+Have fun building!
