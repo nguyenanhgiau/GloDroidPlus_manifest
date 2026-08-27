@@ -33,7 +33,7 @@ sudo apt-get install dosfstools e2fsprogs fdisk kpartx mtools rsync
 ```
 mkdir Glodroid && cd Glodroid
 repo init --depth=1 -u https://android.googlesource.com/platform/manifest -b android-platform-17.0.0_r1 -m default.xml
-git clone https://gitlab.com/glodroid_platform/glodroid_manifest.git -b glodroid-a17 .repo/local_manifests
+git clone https://github.com/nguyenanhgiau/GloDroidPlus_manifest.git -b glodroid-a17 .repo/local_manifests
 ```
 
 4. Sync the source code:
