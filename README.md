@@ -1,9 +1,9 @@
 # GloDroid+
-An AOSP distribution for the Raspberry Pi 4, specifically designed for research, testing, and hardware prototyping for Android Platform Engineers.
+GloDroid+ is an AOSP for the Raspberry Pi, specifically designed for research, testing, and hardware prototyping for Android Platform Engineers.
 
-The Raspberry Pi 4 is an accessible hardware platform with a vast, dynamic support community, possessing sufficient processing power to seamlessly run the Android operating system.
+The Raspberry Pi is an accessible hardware platform with a vast, dynamic support community, possessing sufficient processing power to seamlessly run the Android operating system.
 
-This project is the combination of two open-source repositories: GloDroid and Raspberry-vanilla. The goal of GloDroid+ is to eliminate existing drawbacks while inheriting the technical excellence of both original projects:
+This project is the combination of two open-source repositories: GloDroid and Raspberry-vanilla. The GloDroid+ eliminated existing drawbacks while inheriting the technical excellence of both original projects:
 * Full support for U-Boot as the Bootloader.
 * Integrated Recovery environment and Fastbootd.
 * Support for Super Partitions (Dynamic Partitions) architecture.
@@ -48,19 +48,19 @@ repo sync -c -j$(nproc) --no-clone-bundle
 . build/envsetup.sh
 ```
 
-6. Select the build target (tablet UI, `tv` for Android TV, or `car` for Android Automotive):
+6. Select the build target (one of them: `rpi4` for tablet UI, `rpi4_tv` for Android TV, or `rpi4_car` for Android Automotive):
 
 ```
 lunch rpi4-trunk_staging-userdebug
-lunch rpi4_car-trunk_staging-userdebug
-lunch rpi4_tv-trunk_staging-userdebug
+#lunch rpi4_tv-trunk_staging-userdebug
+#lunch rpi4_car-trunk_staging-userdebug
 ```
 
 7. Build the images:
 
 ```
-make images -j$(nproc)
-make sdcard -j$(nproc)
+make images -j$(nproc) # The output will be generated at $OUT/images.tar.gz
+make sdcard -j$(nproc) # The output will be generated at $OUT/sdcard.img
 ```
 
 ## How to flash the image to rpi4 device
