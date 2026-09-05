@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="glodroid" fetch="https://github.com/glodroid/" />
-  <remote  name="mygitlab"       fetch="git@gitlab.com:glodroid_platform" />
+  <remote  name="mygitlab"       fetch="https://gitlab.com/glodroid_platform" />
   <remote  name="github"   fetch="https://github.com/" />
 
   <project path="device/brcm/rpi4" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-a17" />
