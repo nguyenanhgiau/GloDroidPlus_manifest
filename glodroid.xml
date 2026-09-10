@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/"/>
+  <remote name="aosp" fetch="https://android-review.googlesource.com" review="https://android-review.googlesource.com/"/>
   <remote name="github" fetch="https://github.com/"/>
   <remote name="glodroid" fetch="https://github.com/glodroid/"/>
   <remote name="mygitlab" fetch="https://gitlab.com/glodroid_platform"/>
@@ -1085,7 +1085,7 @@
   <project name="raspberry-vanilla/android_external_ffmpeg_codec2" path="external/ffmpeg_codec2" remote="github" revision="1cb7fcee97f3cedd46857f3cd8354777bed307b2" upstream="android-17.0" dest-branch="android-17.0" groups="local::glodroid"/>
   <project name="raspberry-vanilla/android_external_libyuv_chromium" path="external/libyuv_chromium" remote="github" revision="0e419c1b22c4f8827205ffcd8e53e3bd8edd8d34" upstream="android-17.0" dest-branch="android-17.0" groups="local::glodroid"/>
   <project name="raspberry-vanilla/android_external_minigbm" path="external/minigbm" remote="github" revision="b1f72f8e41ceb349fd91428491ccc7af67459eff" upstream="android-17.0" dest-branch="android-17.0" groups="glodroid,local::glodroid"/>
-  <project name="raspberry-vanilla/android_external_v4l2_codec2" path="external/v4l2_codec2" remote="github" revision="1226adff48e591f0b6cac8d3a271a7324d8fc0ec" upstream="android-17.0" dest-branch="android-17.0" groups="local::glodroid"/>
+  <project name="raspberry-vanilla/android_external_v4l2_codec2" path="external/v4l2_codec2" remote="github" revision="eb594b7f46997c7d5f3fe8bf36011b507b0746dc" upstream="android-17.0" dest-branch="android-17.0" groups="local::glodroid"/>
   <project name="raspberrypi/firmware.git" path="glodroid/bootloader/raspberry-fw" remote="github" revision="57b8dbdce68c8f5e2a425d86e4e7e149e911b9d3" groups="local::glodroid" clone-depth="1"/>
   <project name="toolchain/pgo-profiles" revision="44bae3346df2d8657cde54a5ee069067d607e689" upstream="refs/tags/android-17.0.0_r1" dest-branch="refs/tags/android-17.0.0_r1" groups="pdk" clone-depth="1"/>
   <project name="tools/platform-compat" revision="19ce1c9d406cec9feaf76618e7d772113883d73f" upstream="refs/tags/android-17.0.0_r1" dest-branch="refs/tags/android-17.0.0_r1" groups="pdk,pdk-cw-fs,pdk-fs,sysui-studio"/>
