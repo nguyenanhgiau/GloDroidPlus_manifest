@@ -3,7 +3,7 @@
   <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/"/>
   <remote name="github" fetch="https://github.com/"/>
   <remote name="glodroid" fetch="https://github.com/glodroid/"/>
-  <remote name="mygitlab" fetch="git@gitlab.com:glodroid_platform"/>
+  <remote name="mygitlab" fetch="https://gitlab.com/glodroid_platform"/>
   
   <default remote="aosp" revision="refs/tags/android-17.0.0_r1" sync-j="4"/>
   
