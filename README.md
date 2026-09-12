@@ -51,9 +51,9 @@ repo sync -c -j$(nproc) --no-clone-bundle
 6. Select the build target (one of them: `rpi4` for tablet UI, `rpi4_tv` for Android TV, or `rpi4_car` for Android Automotive):
 
 ```
-lunch rpi4-trunk_staging-userdebug
-#lunch rpi4_tv-trunk_staging-userdebug
-#lunch rpi4_car-trunk_staging-userdebug
+lunch rpi4-aosp_current-userdebug
+#lunch rpi4_tv-aosp_current-userdebug
+#lunch rpi4_car-aosp_current-userdebug
 ```
 
 7. Build the images:
