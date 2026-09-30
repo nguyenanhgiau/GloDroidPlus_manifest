@@ -50,4 +50,7 @@
 
   <!-- updater app -->
   <project path="packages/apps/Updater" remote="mygitlab" name="packages/apps/updater.git" groups="glodroid" revision="glodroid-a17" />
+
+  <remove-project name="platform/packages/apps/Camera2" />
+  <project path="packages/apps/Camera2" remote="mygitlab" name="packages/apps/Camera2.git" groups="glodroid" revision="glodroid-a17" />
 </manifest>
