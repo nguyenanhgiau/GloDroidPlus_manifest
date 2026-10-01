@@ -6,6 +6,7 @@
   <remote  name="github"   fetch="https://github.com/" />
 
   <project path="device/brcm/rpi4" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-a17" />
+  <project path="glodroid/apks"                   remote="glodroid" name="glodroid_external_apks.git" groups="glodroid" revision="refs/tags/apps-v0.8.2" />
 
   <!-- Audio -->
   <project path="external/alsa-lib" name="raspberry-vanilla/android_external_alsa-lib" remote="github" revision="android-17.0" />
