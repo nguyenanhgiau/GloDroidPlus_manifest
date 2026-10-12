@@ -3,7 +3,7 @@
 
   <remote  name="glodroid" fetch="https://github.com/glodroid/" />
   <remote  name="mygitlab"       fetch="https://gitlab.com/glodroid_platform" />
-  <remote  name="github"   fetch="https://github.com/" />
+  <!-- <remote  name="github"   fetch="https://github.com/" /> -->
 
   <project path="device/brcm/rpi4" remote="mygitlab" name="device/glodroid" groups="glodroid" revision="glodroid-a17" />
   <project path="glodroid/apks"                   remote="glodroid" name="glodroid_external_apks.git" groups="glodroid" revision="refs/tags/apps-v0.8.2" />
@@ -32,12 +32,12 @@
   <project path="external/libudev-zero" name="external/libudev-zero" remote="mygitlab" groups="glodroid" revision="glodroid-a17" />
 
   <!-- v4l2_codec2 -->
-  <remove-project name="platform/external/v4l2_codec2" />
+  <remove-project name="LineageOS/android_external_v4l2_codec2" />
   <project path="external/v4l2_codec2" name="raspberry-vanilla/android_external_v4l2_codec2" remote="github" revision="android-17.0" />
 
   <!-- bootloader components (platform) -->
   <project path="glodroid/bootloader/u-boot"      remote="mygitlab" name="glodroid/bootloader/u-boot"    groups="glodroid" revision="glodroid-a17"/>
-  <project path="glodroid/bootloader/atf"         name="platform/external/arm-trusted-firmware" revision="a127b99d5a063c798d1c6d2e1d4791a630f78355" />
+  <project path="glodroid/bootloader/atf"         remote="aosp" name="platform/external/arm-trusted-firmware" revision="a127b99d5a063c798d1c6d2e1d4791a630f78355" />
   <project path="glodroid/bootloader/raspberry-fw"  remote="github"  name="raspberrypi/firmware.git" revision="57b8dbdce68c8f5e2a425d86e4e7e149e911b9d3" clone-depth="1" />
 
   <!-- compilers for platform components -->
@@ -47,7 +47,7 @@
                                            remote="glodroid" name="linaro_gcc_prebuilts.git" revision="refs/tags/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi" />
 
   <!-- updater app -->
-  <project path="packages/apps/Updater" remote="mygitlab" name="packages/apps/updater.git" groups="glodroid" revision="glodroid-a17" />
+  <!-- <project path="packages/apps/Updater" remote="mygitlab" name="packages/apps/updater.git" groups="glodroid" revision="glodroid-a17" /> -->
 
   <remove-project name="platform/packages/apps/Camera2" />
   <project path="packages/apps/Camera2" remote="mygitlab" name="packages/apps/Camera2.git" groups="glodroid" revision="glodroid-a17" />

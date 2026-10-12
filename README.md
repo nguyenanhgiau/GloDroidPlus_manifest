@@ -1,64 +1,37 @@
-# GloDroid+
-GloDroid+ is an AOSP for the Raspberry Pi, specifically designed for research, testing, and hardware prototyping for Android Platform Engineers.
+# GloDroid+ LineageOS
+Getting started
+To get started with Android/LineageOS, you'll need to get familiar with Source Control Tools.
 
-The Raspberry Pi is an accessible hardware platform with a vast, dynamic support community, possessing sufficient processing power to seamlessly run the Android operating system.
-
-This project is the combination of two open-source repositories: GloDroid and Raspberry-vanilla. The GloDroid+ eliminated existing drawbacks while inheriting the technical excellence of both original projects:
-* Full support for U-Boot as the Bootloader.
-* Integrated Recovery environment and Fastbootd.
-* Support for Super Partitions (Dynamic Partitions) architecture.
-* A clean, modular codebase architecture that is easy to maintain and expand for custom hardware development.
-
-# Acknowledgements & License
-This project is heavily based on the outstanding work of two upstream projects:
-* [GloDroid](https://github.com/GloDroidCommunity/raspberry-pi)
-* [Raspberry-vanilla](https://github.com/raspberry-vanilla/android_local_manifest)
-
-GloDroid+ does not claim ownership of the original codebases. All modifications and integrated source codes strictly inherit the respective open-source licenses of their original upstream projects (primarily the Apache License 2.0 for AOSP components and GNU GPLv2 for Kernel/U-Boot components). Please refer to the specific repositories for detailed licensing information.
-
-***
-
-## How to build (Ubuntu 22.04 LTS)
-
-1. Set up the [Android build environment](https://source.android.com/docs/setup/start/requirements).
-
-2. Install required packages:
-
+To initialize your local repository using the LineageOS trees, use a command like this:
+```bash
+mkdir GlodroidPlus_LineageOS && cd GlodroidPlus_LineageOS
+repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+git clone https://github.com/nguyenanhgiau/GloDroidPlus_manifest.git -b rpi4-lineage-24.0 .repo/local_manifests
 ```
-sudo apt-get install dosfstools e2fsprogs fdisk kpartx mtools rsync
+Then to sync up:
+```bash
+repo sync
 ```
 
-3. Initialize the repo:
+# Build instruction
+1. Set up the Android build environment:
 
-```
-mkdir Glodroid && cd Glodroid
-repo init --depth=1 -u https://android.googlesource.com/platform/manifest -b android-17.0.0_r1 -m default.xml
-git clone https://github.com/nguyenanhgiau/GloDroidPlus_manifest.git -b glodroid-a17 .repo/local_manifests
-```
-
-4. Sync the source code:
-
-```
-repo sync -c -j$(nproc) --no-clone-bundle
-```
-
-5. Set up the Android build environment:
-
-```
+```bash
 . build/envsetup.sh
 ```
 
-6. Select the build target (one of them: `rpi4` for tablet UI, `rpi4_tv` for Android TV, or `rpi4_car` for Android Automotive):
+2. Select the build target (one of them: `rpi4` for tablet UI, `rpi4_tv` for Android TV, or `rpi4_car` for Android Automotive):
 
-```
+```bash
 lunch rpi4-aosp_current-userdebug
 #lunch rpi4_tv-aosp_current-userdebug
 #lunch rpi4_car-aosp_current-userdebug
 ```
+Note: not tested rpi4_tv and rpi4_car yet.
 
-7. Build the images:
+3. Build the images:
 
-```
+```bash
 make images -j$(nproc) # The output will be generated at $OUT/images.tar.gz
 make sdcard -j$(nproc) # The output will be generated at $OUT/sdcard.img
 ```
@@ -120,5 +93,15 @@ cd $OUT
 ```
 
 9. Wait for the flashing process to finish.
+
+# Acknowledgements & License
+This project is heavily based on the outstanding work of upstream projects:
+* [GloDroid](https://github.com/GloDroidCommunity/raspberry-pi)
+* [Raspberry-vanilla](https://github.com/raspberry-vanilla/android_local_manifest)
+* [LineageOS](https://github.com/LineageOS/android)
+
+GloDroid+ does not claim ownership of the original codebases. All modifications and integrated source codes strictly inherit the respective open-source licenses of their original upstream projects (primarily the Apache License 2.0 for AOSP components and GNU GPLv2 for Kernel/U-Boot components). Please refer to the specific repositories for detailed licensing information.
+
+***
 
 Have fun building!
