@@ -31,6 +31,13 @@ Note: not tested rpi4_tv and rpi4_car yet.
 
 3. Build the images:
 
+If you want to integrate GMS into your build, run the cmd below:
+```bash
+export WITH_GMS=true
+```
+Refer to [microG Mobile Services](https://github.com/lineageos4microg/android_vendor_partner_gms/blob/master/README.md) to get more information.
+
+Then, compile your product:
 ```bash
 make images -j$(nproc) # The output will be generated at $OUT/images.tar.gz
 make sdcard -j$(nproc) # The output will be generated at $OUT/sdcard.img
