@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/"/>
+  <remote name="aosp" fetch="https://android-review.googlesource.com/" review="https://android-review.googlesource.com/"/>
   <remote name="github" fetch="https://github.com/"/>
   <remote name="glodroid" fetch="https://github.com/glodroid/"/>
   <remote name="mygitlab" fetch="https://gitlab.com/glodroid_platform"/>
