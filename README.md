@@ -63,6 +63,10 @@ make images -j$(nproc) # The output will be generated at $OUT/images.tar.gz
 make sdcard -j$(nproc) # The output will be generated at $OUT/sdcard.img
 ```
 
+Build the Android kernel (optional):
+
+Look into [Android kernel build instructions](https://github.com/nguyenanhgiau/GloDroidPlus_kernel_manifest)
+
 ## How to Flash an Image to an RPi 4 Device (Choose One of the Methods Below)
 
 ### Write the Full Image to an SD Card
