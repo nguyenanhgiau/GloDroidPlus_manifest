@@ -24,33 +24,33 @@ GloDroid+ does not claim ownership of the original codebases. All modifications 
 
 2. Install required packages:
 
-```
+```bash
 sudo apt-get install dosfstools e2fsprogs fdisk kpartx mtools rsync
 ```
 
 3. Initialize the repo:
 
-```
+```bash
 mkdir Glodroid && cd Glodroid
-repo init --depth=1 -u https://github.com/nguyenanhgiau/GloDroidPlus_manifest.git -b release -m glodroid.xml
+repo init --depth=1 -u https://github.com/nguyenanhgiau/GloDroidPlus_manifest.git -b release -m glodroidplus_v17.0.0.xml --git-lfs
 ```
 You can specify a release tag instead of the release branch (e.g. `-b glodroidplus_v17.0.0`)
 
 4. Sync the source code:
 
-```
+```bash
 repo sync -c -j$(nproc) --no-clone-bundle
 ```
 
 5. Set up the Android build environment:
 
-```
+```bash
 . build/envsetup.sh
 ```
 
 6. Select the build target (one of them: `rpi4` for tablet UI, `rpi4_tv` for Android TV, or `rpi4_car` for Android Automotive):
 
-```
+```bash
 lunch rpi4-aosp_current-userdebug
 #lunch rpi4_tv-aosp_current-userdebug
 #lunch rpi4_car-aosp_current-userdebug
@@ -58,7 +58,7 @@ lunch rpi4-aosp_current-userdebug
 
 7. Build the images:
 
-```
+```bash
 make images -j$(nproc) # The output will be generated at $OUT/images.tar.gz
 make sdcard -j$(nproc) # The output will be generated at $OUT/sdcard.img
 ```
