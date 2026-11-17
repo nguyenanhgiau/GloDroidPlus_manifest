@@ -41,8 +41,8 @@
   <project path="glodroid/bootloader/raspberry-fw"  remote="github"  name="raspberrypi/firmware.git" revision="57b8dbdce68c8f5e2a425d86e4e7e149e911b9d3" clone-depth="1" />
 
   <!-- compilers for platform components -->
-  <project path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-aarch64-linux-gnu"
-                                           remote="glodroid" name="linaro_gcc_prebuilts.git" revision="refs/tags/gcc-linaro-7.4.1-2019.02-x86_64_aarch64-linux-gnu" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-aarch64-none-linux-gnu"
+                                           remote="mygitlab" name="prebuilts/linaro_gcc_prebuilts.git" revision="glodroid-a17" />
   <project path="prebuilts/gcc/linux-x86/arm/gcc-linaro-arm-eabi"
                                            remote="glodroid" name="linaro_gcc_prebuilts.git" revision="refs/tags/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi" />
 
